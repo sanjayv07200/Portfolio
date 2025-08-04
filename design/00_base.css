@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Color+Emoji&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --serif: "Noto Serif", serif;
+    --sans-serif: "Inter", sans-serif;
+    --noto-emoji: "Noto Color Emoji", serif;
+
+    --m-esm: 0.5rem;
+    --m-sm: 1rem;
+    --m-md: 2rem;
+    --m-lg: 3.5rem;
+
+    --p-sm: 0;
+    --p-md: 2.5rem;
+    --p-lg: 6rem;
+
+    --btn-p-esm: 0.5rem 1.5rem;
+    --btn-p-sm: 1rem 1.5rem;
+    --btn-p-md: 1.8rem 4rem;
+    --btn-p-lg: 4rem 4.8rem;
+
+    --fs-esm: 1.4rem;
+    --fs-sm: 1.6rem;
+    --fs-md: 2rem;
+
+    --fsh-sm: 3rem;
+    --fsh-md: 2rem;
+    --fsh-lg: 8rem;
+
+    --gap-sm: 1rem;
+    --gap-md: 2rem;
+
+    --fw-bold: 500;
+
+    --color-green: 55, 178, 77;
+    --color-black: 52, 58, 64;
+    --color-white: 248, 249, 250;
+
+    --bg-green: rgb(var(--color-green));
+    --bg-light-green: rgba(var(--color-green), 0.1);
+
+    --round-p5: 0.5rem;
+    --round-1: 0.6rem;
+    --round: 9999999999em;
+
+    --border-grey: 2px solid rgba(var(--color-black), 0.5);
+    --border-black: 2px solid rgba(var(--color-black), 1);
+    --border-green: 2px solid rgba(var(--color-green), 1);
+
+    --shadow-01: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: var(--fs-sm);
+    color: rgb(var(--color-black));
+    background-color: rgb(var(--color-white));
+    font-family: var(--serif);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.04rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+span {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-family: var(--sans-serif);
+}
+
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
+.header,
+.section {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.section > h2:first-child {
+    font-size: 4rem;
+    margin-bottom: var(--m-md);
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.emoji {
+    font-family: var(--noto-emoji);
+}
+
+.btn-outline,
+.btn-filled {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    padding: 1.8rem 2.9rem;
+    border: var(--border-grey);
+    border-radius: var(--round);
+}
+
+.btn-outline ion-icon,
+.btn-filled ion-icon {
+    font-size: 1.8rem;
+    --ionicon-stroke-width: 3rem;
+}
+
+.btn-filled {
+    background-color: rgb(var(--color-black));
+    color: rgb(var(--color-white));
+    border: var(--border-black);
+}
+
+.btn-outline:hover {
+    background-color: rgba(var(--color-black), 0.1);
+}
+
+.btn-filled:hover {
+    background-color: rgba(var(--color-black), 0.9);
+}
+
+.btn-outline:hover ion-icon,
+.btn-filled:hover ion-icon {
+    scale: 1.2;
+}
+
+.no-select {
+    pointer-events: none;
+    user-select: none;
+}

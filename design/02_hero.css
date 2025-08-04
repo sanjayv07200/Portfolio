@@ -1,0 +1,89 @@
+/* Header : 76.8 px ~ 7.68rem */
+
+#hero {
+    height: calc(100vh - 7.68rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
+}
+
+#hero .profile {
+    height: 15rem;
+    border-radius: var(--round);
+    margin: 0 auto;
+    margin-bottom: var(--m-sm);
+}
+
+#hero .about {
+    text-align: center;
+    margin-bottom: var(--m-lg);
+    opacity: 0.6;
+    max-width: 100rem;
+    line-height: 2.5rem;
+}
+
+#hero .title01 {
+    font-size: var(--fs-md);
+    margin-bottom: var(--m-md);
+}
+
+#hero .title02 {
+    text-align: center;
+    font-size: var(--fsh-lg);
+    color: rgb(var(--color-green));
+}
+
+#hero .home-btns {
+    display: flex;
+    gap: var(--gap-md);
+}
+
+ion-icon[name="attach-outline"] {
+    font-size: 2.5rem;
+    transform: rotate(30deg);
+}
+
+/* Scroll Button */
+
+#hero .scroll {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.scroll-down .arrow_01 {
+    animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+    transform: translateY(0%) rotate(45deg);
+}
+
+.scroll-down .arrow_02 {
+    animation: scrolldown 1.2s ease-in-out infinite;
+    transform: translateY(0%) rotate(45deg);
+    margin-top: -0.5rem;
+}
+
+.scroll-down .arrow_01,
+.scroll-down .arrow_02 {
+    z-index: 80;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-width: 0 0.3rem 0.3rem 0;
+    border-style: solid;
+    border-color: rgb(var(--color-green));
+}
+
+@keyframes scrolldown {
+    0% {
+        transform: translateY(20%) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0%) rotate(45deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(20%) rotate(45deg);
+        opacity: 1;
+    }
+}
